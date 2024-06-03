@@ -41,7 +41,16 @@ export const contacts = [
   },
 ];
 
-export const fields = [
+type FieldName = 'first_name' | 'email' | 'device_number';
+
+interface IField {
+  name: FieldName;
+  placeholder: string;
+  label: string;
+  type: string;
+}
+
+export const fields: IField[] = [
   {
     label: 'User Name',
     placeholder: 'User name',
